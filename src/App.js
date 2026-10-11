@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  
   navigator.permissions.query({ name: "accelerometer" }).then((result) => {
   if (result.state === "denied") {
     console.log("Permission to use accelerometer sensor is denied.");
