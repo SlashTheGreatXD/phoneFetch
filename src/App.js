@@ -1,22 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { Accelerometer } from 'expo-sensors';
 
 function App() {
-  const [data, setData] = useState({});
+  const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener("reading", () => {
+  console.log(`Acceleration along the X-axis ${acl.x}`);
+  console.log(`Acceleration along the Y-axis ${acl.y}`);
+  console.log(`Acceleration along the Z-axis ${acl.z}`);
+});
+acl.start();
   
-  useEffect(() => {
-    _subscribe();
-  }, []);
-
-  const _subscribe = () => {
-    this._subscription = Accelerometer.addListener(accelerometerData => {
-      setData(accelerometerData);
-    });
-  };
-  
-  let { x, y, z } = data;
+  let { x, y, z } = acl;
   return (
     <div className="App">
       <header className="App-header">
