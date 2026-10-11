@@ -24,7 +24,7 @@ function App() {
       </header>
       <body>
       Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
-        x: {round(x)} y: {round(y)} z: {round(z)}
+        x: {Math.round(x)} y: {Math.round(y)} z: {Math.round(z)}
       </body>
     </div>
   );
