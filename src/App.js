@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         Phone Fetch
-        <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/basic-image.png"> </img>
       </header>
       <body>
         
