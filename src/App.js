@@ -23,12 +23,8 @@ function App() {
         Phone Fetch
       </header>
       <body>
-        <View>
-      <Text>Accelerometer: (in Gs where 1 G = 9.81 m s^-2)</Text>
-      <Text>
+      Accelerometer: (in Gs where 1 G = 9.81 m s^-2)
         x: {round(x)} y: {round(y)} z: {round(z)}
-      </Text>
-    </View>
       </body>
     </div>
   );
